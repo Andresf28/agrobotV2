@@ -1,0 +1,35 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/andres/agrobot/install/serial/include/**",
+        "/home/andres/agrobot/install/rplidar_ros/include/**",
+        "/home/andres/agrobot/install/ros2_control_demo_example_9/include/**",
+        "/home/andres/agrobot/install/ros2_control_demo_example_8/include/**",
+        "/home/andres/agrobot/install/ros2_control_demo_example_7/include/**",
+        "/home/andres/agrobot/install/ros2_control_demo_example_6/include/**",
+        "/home/andres/agrobot/install/ros2_control_demo_example_5/include/**",
+        "/home/andres/agrobot/install/ros2_control_demo_example_4/include/**",
+        "/home/andres/agrobot/install/ros2_control_demo_example_3/include/**",
+        "/home/andres/agrobot/install/ros2_control_demo_example_2/include/**",
+        "/home/andres/agrobot/install/ros2_control_demo_example_12/include/**",
+        "/home/andres/agrobot/install/ros2_control_demo_example_1/include/**",
+        "/home/andres/turtlebot3_ws/install/turtlebot3_gazebo/include/**",
+        "/home/andres/turtlebot3_ws/install/turtlebot3_fake_node/include/**",
+        "/home/andres/lab_ws/install/ros2_control_demo_example_9/include/**",
+        "/opt/ros/humble/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

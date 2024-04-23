@@ -1,0 +1,318 @@
+<?xml version="1.0"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0024404 -2.0665E-05 -0.036093"
+        rpy="0 0 0" />
+      <mass
+        value="3.563" />
+      <inertia
+        ixx="0.019027"
+        ixy="-2.526E-10"
+        ixz="0.00063662"
+        iyy="0.011957"
+        iyz="6.1119E-06"
+        izz="0.020595" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robo2/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robo2/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="rueda_izq_arriba">
+    <inertial>
+      <origin
+        xyz="2.7756E-17 2.7756E-17 -0.031817"
+        rpy="0 0 0" />
+      <mass
+        value="0.72984" />
+      <inertia
+        ixx="0.00091283"
+        ixy="-4.1103E-20"
+        ixz="1.43E-20"
+        iyy="0.00091283"
+        iyz="-5.6001E-20"
+        izz="0.001326" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robo2/meshes/rueda_izq_arriba.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robo2/meshes/rueda_izq_arriba.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rueda_izq_arriba_joint"
+    type="continuous">
+    <origin
+      xyz="0.10092 0.20435 -0.107"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rueda_izq_arriba" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="rueda_izq_abajo">
+    <inertial>
+      <origin
+        xyz="1.3878E-17 -6.9389E-18 -0.031817"
+        rpy="0 0 0" />
+      <mass
+        value="0.72984" />
+      <inertia
+        ixx="0.00091283"
+        ixy="1.3848E-21"
+        ixz="4.073E-21"
+        iyy="0.00091283"
+        iyz="2.5739E-20"
+        izz="0.001326" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robo2/meshes/rueda_izq_abajo.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robo2/meshes/rueda_izq_abajo.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rueda_izq_abajo_joint"
+    type="continuous">
+    <origin
+      xyz="-0.065951 0.20435 -0.107"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rueda_izq_abajo" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="rueda_der_abajo">
+    <inertial>
+      <origin
+        xyz="-9.7145E-17 -6.9389E-18 -0.031817"
+        rpy="0 0 0" />
+      <mass
+        value="0.72984" />
+      <inertia
+        ixx="0.00091283"
+        ixy="1.6304E-19"
+        ixz="-5.3591E-20"
+        iyy="0.00091283"
+        iyz="-9.375E-20"
+        izz="0.001326" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robo2/meshes/rueda_der_abajo.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robo2/meshes/rueda_der_abajo.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rueda_der_abajo_joint"
+    type="continuous">
+    <origin
+      xyz="-0.065951 -0.20435 -0.107"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rueda_der_abajo" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="rueda_der_arriba">
+    <inertial>
+      <origin
+        xyz="0 -6.9389E-18 -0.031817"
+        rpy="0 0 0" />
+      <mass
+        value="0.72984" />
+      <inertia
+        ixx="0.00091283"
+        ixy="-7.5158E-20"
+        ixz="-3.6325E-20"
+        iyy="0.00091283"
+        iyz="-1.7327E-20"
+        izz="0.001326" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robo2/meshes/rueda_der_arriba.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robo2/meshes/rueda_der_arriba.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rueda_der_arriba_joint"
+    type="continuous">
+    <origin
+      xyz="0.10092 -0.20435 -0.107"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rueda_der_arriba" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="lidar">
+    <inertial>
+      <origin
+        xyz="-0.0074835 -9.1926E-05 0.010668"
+        rpy="0 0 0" />
+      <mass
+        value="1.3308" />
+      <inertia
+        ixx="0.00061492"
+        ixy="-8.0198E-07"
+        ixz="0.00015824"
+        iyy="0.0009607"
+        iyz="-3.0916E-06"
+        izz="0.0010982" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robo2/meshes/lidar.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://robo2/meshes/lidar.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_joint"
+    type="fixed">
+    <origin
+      xyz="0.056196 0 0.1546"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+
+</robot>

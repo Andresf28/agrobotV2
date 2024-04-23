@@ -1,0 +1,26 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/andres/agrobot2/install/robo2/lib/python3.10/site-packages",
+        "/home/andres/agrobot/install/modelo_robot/lib/python3.10/site-packages",
+        "/home/andres/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages",
+        "/home/andres/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages",
+        "/home/andres/lab_ws/install/urdf_tutorial/lib/python3.10/site-packages",
+        "/home/andres/lab_ws/install/lab2/lib/python3.10/site-packages",
+        "/home/andres/lab_ws/install/joy_tester/lib/python3.10/site-packages",
+        "/home/andres/lab_ws/install/centauri/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/andres/agrobot2/install/robo2/lib/python3.10/site-packages",
+        "/home/andres/agrobot/install/modelo_robot/lib/python3.10/site-packages",
+        "/home/andres/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages",
+        "/home/andres/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages",
+        "/home/andres/lab_ws/install/urdf_tutorial/lib/python3.10/site-packages",
+        "/home/andres/lab_ws/install/lab2/lib/python3.10/site-packages",
+        "/home/andres/lab_ws/install/joy_tester/lib/python3.10/site-packages",
+        "/home/andres/lab_ws/install/centauri/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}
