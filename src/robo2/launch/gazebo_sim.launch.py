@@ -19,7 +19,7 @@ def generate_launch_description():
     model_arg = DeclareLaunchArgument(name='model', description='Absolute path to robot urdf file')
     pkg_gazebo_ros = get_package_share_directory('gazebo_ros')
     use_sim_time = LaunchConfiguration('use_sim_time') 
-    package_name = 'modelo_robot'
+    package_name = 'robo2'
     pkg_share = FindPackageShare(package=package_name).find(package_name)
     pkg_gazebo_ros = FindPackageShare(package='gazebo_ros').find('gazebo_ros') 
     default_rviz_config_path = os.path.join(pkg_share, 'rviz/rviz.rviz')
@@ -111,6 +111,14 @@ def generate_launch_description():
         executable="spawner",
         arguments=["joint_state_broadcaster"],
     )
+
+    twist_mux_params = os.path.join(get_package_share_directory(package_name),'config','twist_mux.yaml')
+    twist_mux = Node(
+            package="twist_mux",
+            executable="twist_mux",
+            parameters=[twist_mux_params, {'use_sim_time': True}],
+            remappings=[('/cmd_vel_out','/diff_drive_controller/cmd_vel_unstamped')]
+        )
     
     gazebo_params_file = os.path.join(get_package_share_directory(package_name),'config','gazebo_params.yaml')
 
@@ -127,7 +135,8 @@ def generate_launch_description():
     declare_use_ros2_control_cmd,
     #declare_rviz_config_file_cmd,
     node_robot_state_publisher,
-    start_joint_state_publisher_cmd, 
+    start_joint_state_publisher_cmd,
+    twist_mux, 
     rviz2,
     spawn,
     gazebo,
