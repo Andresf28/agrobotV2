@@ -84,7 +84,7 @@ def generate_launch_description():
         package="controller_manager",
         executable="ros2_control_node",
         parameters=[{'robot_description': robot_description_config},
-                    controller_params_file]
+                    controller_params_file],
     )
 
     delayed_controller_manager = TimerAction(period=3.0, actions=[controller_manager])
