@@ -39,7 +39,7 @@ def generate_launch_description():
     # Get URDF via xacro
     # Process the URDF file
     pkg_path = os.path.join(get_package_share_directory('robo2'))
-    xacro_file = os.path.join(pkg_path,'urdf','bringup.urdf.xacro')
+    xacro_file = os.path.join(pkg_path,'urdf','bringup2.urdf.xacro')
     # robot_description_config = xacro.process_file(xacro_file).toxml()
     robot_description_config = Command(['xacro ', xacro_file, ' use_ros2_control:=', use_ros2_control, ' sim_mode:=', use_sim_time])
 
@@ -66,16 +66,7 @@ def generate_launch_description():
             package="twist_mux",
             executable="twist_mux",
             parameters=[twist_mux_params],
-            remappings=[('/cmd_vel_out','/diff_drive_controller2/cmd_vel_unstamped')
-                        ]
-        )
-    
-    twist_mux2 = Node(
-            package="twist_mux",
-            executable="twist_mux",
-            parameters=[twist_mux_params],
-            remappings=[('/cmd_vel_out','/diff_drive_controller/cmd_vel_unstamped')
-                        ]
+            remappings=[('/cmd_vel_out','/diff_drive_controller/cmd_vel_unstamped')]
         )
 
     controller_params_file = os.path.join(get_package_share_directory(package_name),'config','arduino_control.yaml')
@@ -95,23 +86,10 @@ def generate_launch_description():
         arguments=["diff_drive_controller"],
     )
 
-    diff_drive_spawner2 = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=["diff_drive_controller2"],
-    )
-
     delayed_diff_drive_spawner = RegisterEventHandler(
         event_handler=OnProcessStart(
             target_action=controller_manager,
             on_start=[diff_drive_spawner],
-        )
-    )
-
-    delayed_diff_drive_spawner2 = RegisterEventHandler(
-        event_handler=OnProcessStart(
-            target_action=controller_manager,
-            on_start=[diff_drive_spawner2],
         )
     )
 
@@ -133,7 +111,6 @@ def generate_launch_description():
     return LaunchDescription([
     declare_use_sim_time_cmd,
     twist_mux,   
-    twist_mux2, 
     declare_use_ros2_control_cmd,
     #declare_rviz_config_file_cmd,
     node_robot_state_publisher,
@@ -143,6 +120,5 @@ def generate_launch_description():
     #diff_drive_controller_spawner,
     delayed_controller_manager,
     delayed_diff_drive_spawner,
-    delayed_diff_drive_spawner2,
     delayed_joint_broad_spawner
 ])
