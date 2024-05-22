@@ -27,7 +27,7 @@ class FollowPerson(Node):
             'detected_person',
             self.listener_callback,
             10)
-        self.publisher_ = self.create_publisher(Twist, 'diff_drive_controller/cmd_vel_unstamped', 10) #/smd_vel
+        self.publisher_ = self.create_publisher(Twist, 'cmd_vel', 10) #/smd_vel
 
 
         self.declare_parameter("rcv_timeout_secs", 1.0)

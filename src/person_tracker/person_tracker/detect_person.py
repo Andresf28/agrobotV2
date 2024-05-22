@@ -84,7 +84,7 @@ class DetectPerson(Node):
                 resultante = cv2.ellipse(mascara,(x_centro,y_centro),(largo,ancho),90,0,360,(255,255,255),-1)
                 #cv2.imshow("negro",resultante)
                 keypoints_norm, out_image = self.blob_detector(resultante)
-                cv2.imshow("out",out_image)
+                #cv2.imshow("out",out_image)
 
                 img_to_pub = self.bridge.cv2_to_imgmsg(out_image)
                 img_to_pub.header = data.header
@@ -111,7 +111,7 @@ class DetectPerson(Node):
 
 
             except:
-                cv2.imshow("negro",mascara)
+                #cv2.imshow("negro",mascara)
                 print("hola")
         
 
