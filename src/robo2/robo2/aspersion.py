@@ -30,7 +30,7 @@ class Aspersion(Node): # MODIFY NAME
         while True:
         
 
-            # Toggle the output every second
+            # Toggle the output every second a
             GPIO.output(self.bombaPin, GPIO.HIGH)
             GPIO.output(self.valvula1Pin, GPIO.HIGH)
             GPIO.output(self.valvula2Pin, GPIO.HIGH)
