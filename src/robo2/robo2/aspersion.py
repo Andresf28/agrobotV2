@@ -18,9 +18,9 @@ class Aspersion(Node): # MODIFY NAME
 
 
 
-        GPIO.setup(self.bombaPin, GPIO.OUT, initial=GPIO.LOW)
-        GPIO.setup(self.valvula1Pin, GPIO.OUT, initial=GPIO.LOW)
-        GPIO.setup(self.valvula2Pin, GPIO.OUT, initial=GPIO.LOW)
+        GPIO.setup(self.bombaPin, GPIO.OUT, initial=GPIO.HIGH)
+        GPIO.setup(self.valvula1Pin, GPIO.OUT, initial=GPIO.HIGH)
+        GPIO.setup(self.valvula2Pin, GPIO.OUT, initial=GPIO.HIGH)
         self.curr_value = GPIO.HIGH
         self.aspersion_continua()
     
@@ -28,24 +28,7 @@ class Aspersion(Node): # MODIFY NAME
         a = 0
         try:
             while True:
-                if not a:
-
-                    time.sleep(1)
-                    print("CHAANDA")
-                    # Toggle the output every second a
-                    GPIO.output(self.bombaPin, self.curr_value)
-                    GPIO.output(self.valvula1Pin, self.curr_value)
-                    GPIO.output(self.valvula2Pin, self.curr_value)
-                    print("CHANDA1")
-                else:
-                    print("CHAANDA")
-                    # Toggle the output every second a
-                    GPIO.output(self.bombaPin, self.curr_value)
-                    GPIO.output(self.valvula1Pin, self.curr_value)
-                    GPIO.output(self.valvula2Pin, self.curr_value)
-                    print("CHANDA1")
-
-                a += 1
+                a=5
                                    
         finally:
             GPIO.cleanup()
