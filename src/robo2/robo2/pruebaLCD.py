@@ -15,7 +15,7 @@ while True:
      lcd.display("Enter String you",1,0)
      lcd.display("want to display",2,0) 
      sleep(1)
-     lcd.display("Sebastian la mas perra",1,0)
+     lcd.display("Sebastian gey",1,0)
      sleep(2)
      lcd.clear()    
    except KeyboardInterrupt:    
