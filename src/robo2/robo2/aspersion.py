@@ -10,8 +10,8 @@ class Aspersion(Node): # MODIFY NAME
         self.get_logger().info("INICIANDO ASPERSIÓN")
 
         self.bombaPin = 12
-        self.valvula1Pin = 16
-        self.valvula2Pin = 18
+        self.valvula1Pin = 23
+        self.valvula2Pin = 24
 
         GPIO.setmode(GPIO.BOARD)  # BCM pin-numbering scheme from Raspberry Pi
         # set pin as an output pin with optional initial state of HIGH
