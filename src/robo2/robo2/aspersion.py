@@ -25,9 +25,8 @@ class Aspersion(Node): # MODIFY NAME
         self.aspersion_continua()
     
     def aspersion_continua(self):
-        
+        try:
 
-        while True:      
             time.sleep(1)
             print("CHAANDA")
             # Toggle the output every second a
@@ -35,9 +34,12 @@ class Aspersion(Node): # MODIFY NAME
             GPIO.output(self.valvula1Pin, self.curr_value)
             GPIO.output(self.valvula2Pin, self.curr_value)
             print("CHANDA1")
-            self.curr_value ^= GPIO.HIGH
-        
-
+            
+            while True:
+                a = 5    
+                       
+        finally:
+            GPIO.cleanup()
 
 
 def main(args=None):
