@@ -27,11 +27,14 @@ class Aspersion(Node): # MODIFY NAME
     def aspersion_continua(self):
         
         while True:
-            # Toggle the output every second
-            GPIO.output(self.bombaPin, GPIO.HIGH)
-            GPIO.output(self.valvula1Pin, GPIO.HIGH)
-            GPIO.output(self.valvula2Pin, GPIO.HIGH)
-                
+            try:
+
+                # Toggle the output every second
+                GPIO.output(self.bombaPin, GPIO.HIGH)
+                GPIO.output(self.valvula1Pin, GPIO.HIGH)
+                GPIO.output(self.valvula2Pin, GPIO.HIGH)
+            finally:
+                GPIO.cleanup()
         
 
 
